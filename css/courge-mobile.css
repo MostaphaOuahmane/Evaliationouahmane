@@ -80,7 +80,6 @@ header nav {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    background-color: rgb(160, 113, 113);
 }
 
 header nav a {
@@ -166,6 +165,7 @@ main article a {
 
 footer {
     background-color: #373737;
+    color: #fff;
 }
 
  /* la nav du pied de page dans le cartouche  */
@@ -218,6 +218,10 @@ footer figcaption, footer p {
     text-align: center;
 }
 
+footer hr {
+    width: 80%;
+    margin: 20px auto;
+}
 /* la partie réseaux sociaux  */
 #reseaux {
     justify-content: center;
@@ -229,9 +233,67 @@ footer figcaption, footer p {
     margin: 0 50px;
 }
 
+/* les styles pour media queries */
 
+@media screen and (max-width: 576px) {
 
+    body {
+        background-color: #fff;
+    }
 
+    header > div {
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        gap: 2rem;
+    }
 
+    header figure {
+        width: 80%;
+        text-align: center;
+    }
 
+    header figure+div {
+        width: 80%;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 
+    header nav {
+        justify-content: space-between;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main article {
+        width: 60%;
+    }
+
+    footer figure {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+
+    header > div {
+        background-color: pink;
+    }
+}
+
+/* des styles en cas d'impression de la page  */
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    footer {
+        background-color: #eee;
+    }
+
+    main img {
+        opacity: 0.4;
+    }
+}
